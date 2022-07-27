@@ -37,14 +37,14 @@ client = pymongo.MongoClient(
 	)# MONGO DB LINK 
 db = client.credit_cards
 
-developers = ['878216403']
+developers = ['671062879']
 
 
 addusr = ""
-tk = os.getenv("TOKEN")
-mode = os.getenv("MODE")
+tk = os.getenv("5260476640:AAFWJsEuVBj1HMfgapz64wtJb0AgH23Hlt8")
+mode = os.getenv("prod")
 
-posting_channel = os.getenv("CHAT_ID_FORWARD")
+posting_channel = os.getenv("-1001783600045")
 
 if mode == "dev":
 	def run(updater):
@@ -53,7 +53,7 @@ if mode == "dev":
 elif mode == "prod":
 	def run(updater):
 		PORT = int(os.environ.get("PORT", "8443"))
-		HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME")
+		HEROKU_APP_NAME = os.environ.get("aliultrascrapper")
 		updater.start_webhook(listen="0.0.0.0", port=PORT, url_path=tk)
 		updater.bot.set_webhook(f"https://{HEROKU_APP_NAME}.herokuapp.com/"+ tk)
 else:
