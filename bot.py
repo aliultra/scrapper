@@ -53,7 +53,7 @@ if mode == "dev":
 elif mode == "prod":
 	def run(updater):
 		PORT = int(os.environ.get("PORT", "8443"))
-		HEROKU_APP_NAME = os.environ.get("aliultrascrapper")
+		HEROKU_APP_NAME = os.environ.get("scrapper")
 		updater.start_webhook(listen="0.0.0.0", port=PORT, url_path=tk)
 		updater.bot.set_webhook(f"https://{HEROKU_APP_NAME}.herokuapp.com/"+ tk)
 else:
