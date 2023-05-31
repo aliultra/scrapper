@@ -41,7 +41,7 @@ developers = ['671062879']
 
 
 addusr = ""
-tk = os.getenv("5260476640:AAFWJsEuVBj1HMfgapz64wtJb0AgH23Hlt8")
+tk = os.getenv("5260476640:xxxxxxxxxxxx")
 mode = os.getenv("prod")
 
 posting_channel = os.getenv("-1001783600045")
